@@ -302,7 +302,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: ${{ matrix.config.artifact }}
-        path: ./
+        path: ./build
 
     - name: Download URL
       uses: actions/download-artifact@v2
