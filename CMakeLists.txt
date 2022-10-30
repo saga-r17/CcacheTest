@@ -8,6 +8,7 @@
 # CMake's behaviour is compatible with the named version. This is a standard CMake command, so more
 # information can be found in the CMake docs.
 
+cmake_minimum_required(VERSION 3.13)
 project(MASC VERSION 0.1.0)
 
 set (BaseTargetName MASC)
