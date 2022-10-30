@@ -72,11 +72,11 @@ juce_add_plugin("${BaseTargetName}"
 # that will be built into the target. This is a standard CMake command.
 
 target_sources(${BaseTargetName} PRIVATE
-        Source/PluginEditor.cpp
-        Source/LooperData.cpp
-        Source/LooperComponent.cpp
-        Source/MidiProcessor.cpp
-        Source/PluginProcessor.cpp)
+        PluginEditor.cpp
+        LooperData.cpp
+        LooperComponent.cpp
+        MidiProcessor.cpp
+        PluginProcessor.cpp)
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
 # project, these might be passed in the 'Preprocessor Definitions' field. JUCE modules also make use
