@@ -1,5 +1,4 @@
-# Example Audio Plugin CMakeLists.txt
-# for testing purpose adding this line
+
 # To get started on a new plugin, copy this entire folder (containing this file and C++ sources) to
 # a convenient location, and then start making modifications.
 
