@@ -66,7 +66,7 @@ juce_add_plugin(AudioPluginExample
 # include all your JUCE module headers; if you're happy to include module headers directly, you
 # probably don't need to call this.
 
-# juce_generate_juce_header(AudioPluginExample)
+juce_generate_juce_header(AudioPluginExample)
 
 # `target_sources` adds source files to a target. We pass the target that needs the sources as the
 # first argument, then a visibility parameter for the sources (PRIVATE is normally best practice,
@@ -75,6 +75,9 @@ juce_add_plugin(AudioPluginExample
 
 target_sources(AudioPluginExample PRIVATE
     Source/PluginEditor.cpp
+    Source/LooperData.cpp
+    Source/LooperComponent.cpp
+    Source/MidiProcessor.cpp
     Source/PluginProcessor.cpp)
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
@@ -107,5 +110,21 @@ target_compile_definitions(AudioPluginExample
 # here too. This is a standard CMake command.
 
 target_link_libraries(AudioPluginExample PRIVATE
-    # AudioPluginData           # If we'd created a binary data target, we'd link to it here
-    juce::juce_audio_utils)
+        # AudioPluginData           # If we'd created a binary data target, we'd link to it here
+        juce::juce_audio_basics
+        juce::juce_audio_devices
+        juce::juce_audio_formats
+        juce::juce_audio_plugin_client
+        juce::juce_audio_processors
+        juce::juce_audio_utils
+        juce::juce_core
+        juce::juce_data_structures
+        juce::juce_events
+        juce::juce_graphics
+        juce::juce_gui_basics
+        juce::juce_gui_extra
+        shared_plugin_helpers
+        shared_processing_code
+        juce_recommended_config_flags
+        juce_recommended_lto_flags
+        juce_recommended_warning_flags)

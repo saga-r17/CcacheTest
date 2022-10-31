@@ -1,20 +1,37 @@
+/*
+  ==============================================================================
+
+    This file contains the basic framework code for a JUCE plugin processor.
+
+  ==============================================================================
+*/
+
 #pragma once
 
-#include <juce_audio_processors/juce_audio_processors.h>
+#include <JuceHeader.h>
+#include "MidiProcessor.h"
+
 
 //==============================================================================
-class AudioPluginAudioProcessor  : public juce::AudioProcessor
+/**
+*/
+class MASCAudioProcessor  : public juce::AudioProcessor
+                            #if JucePlugin_Enable_ARA
+                             , public juce::AudioProcessorARAExtension
+                            #endif
 {
 public:
     //==============================================================================
-    AudioPluginAudioProcessor();
-    ~AudioPluginAudioProcessor() override;
+    MASCAudioProcessor();
+    ~MASCAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
     void releaseResources() override;
 
+   #ifndef JucePlugin_PreferredChannelConfigurations
     bool isBusesLayoutSupported (const BusesLayout& layouts) const override;
+   #endif
 
     void processBlock (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
 
@@ -41,7 +58,15 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    juce::AudioProcessorValueTreeState apvts;
+    MidiProcessor midiProcessor{ this };
+
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MASCAudioProcessor)
+
+    juce::AudioProcessorValueTreeState::ParameterLayout createParams();
+
+
+
 };
