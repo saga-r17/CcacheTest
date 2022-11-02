@@ -242,7 +242,7 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        path: .\build\MASC\Release\VST3\MASC.vst3\Contents\
+        path: ./build
         name: artefacts
 
   release:
