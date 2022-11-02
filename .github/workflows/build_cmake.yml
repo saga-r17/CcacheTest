@@ -243,7 +243,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         path: .\build
-        name: build_artefacts
+        name: ${{ matrix.config.artifact }}
 
   release:
     if: contains(github.ref, 'tags/v')
