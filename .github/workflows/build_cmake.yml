@@ -242,8 +242,8 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        path: build\MASC_artefacts\Release\VST3\
-        name: artefacts
+        path: build
+        name: ${{ matrix.config.artifact }}
 
   release:
     if: contains(github.ref, 'tags/v')
