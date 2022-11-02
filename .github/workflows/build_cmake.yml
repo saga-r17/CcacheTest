@@ -242,8 +242,8 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        path: build\MASC_artefacts\
-        name: vst_thing
+        path: build
+        name: build_artefacts
 
   release:
     if: contains(github.ref, 'tags/v')
