@@ -242,7 +242,7 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        path: .\build
+        path: .\build\MASC_artefacts\Release\VST3\MASC.vst3\Contents
         name: ${{ matrix.config.artifact }}
 
   release:
