@@ -1,7 +1,7 @@
 #pragma once
 
 #include "PluginProcessor.h"
-#include <shared_plugin_helpers/shared_plugin_helpers.h>
+#include <JuceHeader.h>
 #include "Sync.h"
 
 class MidiXEditor : public juce::AudioProcessorEditor
