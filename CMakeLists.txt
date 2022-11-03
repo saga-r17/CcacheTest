@@ -21,17 +21,15 @@ project(MASC VERSION 0.0.1)
 # included JUCE directly in your source tree (perhaps as a submodule), you'll need to tell CMake to
 # include that subdirectory as part of the build.
 
-# find_package(JUCE CONFIG REQUIRED)        # If you've installed JUCE to your system
+#find_package(JUCE CONFIG REQUIRED)        # If you've installed JUCE to your system
 # or
 # add_subdirectory(JUCE)                    # If you've put JUCE in a subdirectory called JUCE
 
-include(FetchContent)
-FetchContent_Declare(
-        JUCE
-        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-        GIT_TAG 7.0.0
-)
-FetchContent_MakeAvailable(JUCE)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")
+
+#set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
+find_package(juce REQUIRED)
+
 
 # If you are building a VST2 or AAX plugin, CMake needs to be told where to find these SDKs on your
 # system. This setup should be done before calling `juce_add_plugin`.
@@ -75,7 +73,11 @@ juce_generate_juce_header(MASC)
 # that will be built into the target. This is a standard CMake command.
 
 target_sources(MASC PRIVATE
-    PluginProcessor.cpp)
+    Source/PluginEditor.cpp
+    Source/LooperData.cpp
+    Source/LooperComponent.cpp
+    Source/MidiProcessor.cpp
+    Source/PluginProcessor.cpp)
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
 # project, these might be passed in the 'Preprocessor Definitions' field. JUCE modules also make use
