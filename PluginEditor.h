@@ -1,22 +1,34 @@
 #pragma once
 
 #include "PluginProcessor.h"
+#include <shared_plugin_helpers/shared_plugin_helpers.h>
+#include "Sync.h"
 
-//==============================================================================
-class AudioPluginAudioProcessorEditor  : public juce::AudioProcessorEditor
+class MidiXEditor : public juce::AudioProcessorEditor
 {
 public:
-    explicit AudioPluginAudioProcessorEditor (AudioPluginAudioProcessor&);
-    ~AudioPluginAudioProcessorEditor() override;
+    explicit MidiXEditor(MidiX& processorToUse)
+        : juce::AudioProcessorEditor(processorToUse)
+        , genericEditor(processorToUse)
 
-    //==============================================================================
-    void paint (juce::Graphics&) override;
-    void resized() override;
+    {
+        //addAndMakeVisible(genericEditor);
+        setSize(400, 300);
+    }
 
-private:
-    // This reference is provided as a quick way for your editor to
-    // access the processor object that created it.
-    AudioPluginAudioProcessor& processorRef;
+    void paint(juce::Graphics& g) override
+    {
+        // (Our component is opaque, so we must completely fill the background with a solid colour)
+        g.fillAll(getLookAndFeel().findColour(juce::ResizableWindow::backgroundColourId));
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessorEditor)
+        g.setColour(juce::Colours::white);
+        g.setFont(15.0f);
+        g.drawFittedText("version 0.0.0", getLocalBounds(), juce::Justification::topRight, 1);
+    }
+
+
+    void resized() override { genericEditor.setBounds(getLocalBounds()); }
+    //AtomicLabel positionLabel;
+
+    juce::GenericAudioProcessorEditor genericEditor;
 };

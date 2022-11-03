@@ -75,7 +75,6 @@ juce_add_plugin(MASC
 # that will be built into the target. This is a standard CMake command.
 
 target_sources(MASC PRIVATE
-    PluginEditor.cpp
     PluginProcessor.cpp)
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
