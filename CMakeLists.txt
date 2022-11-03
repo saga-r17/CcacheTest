@@ -27,8 +27,17 @@ project(MASC VERSION 0.0.1)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")
 
+include(FetchContent)
+FetchContent_Declare(
+        JUCE
+        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
+        GIT_TAG 7.0.2
+)
+FetchContent_MakeAvailable(JUCE)
+
+
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
-find_package(juce REQUIRED)
+#find_package(juce REQUIRED)
 
 
 # If you are building a VST2 or AAX plugin, CMake needs to be told where to find these SDKs on your
