@@ -1,6 +1,6 @@
 
 #pragma once
-#include <shared_processing_code/shared_processing_code.h>
+#include <JuceHeader.h>
 
 struct Sync
 {
