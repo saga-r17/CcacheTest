@@ -85,7 +85,6 @@ source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/Source PREFIX "" FILES ${SourceFil
 
 # Required for Linux happiness:
 # See https://forum.juce.com/t/loading-pytorch-model-using-binarydata/39997/2
-set_target_properties(Assets PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 
 # This cleans up the folder organization on Xcode.
 # It tucks the Plugin varieties into a "Targets" folder and generate an Xcode Scheme manually
