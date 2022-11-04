@@ -83,9 +83,6 @@ set_target_properties("${PROJECT_NAME}" PROPERTIES FOLDER "")
 # The Xcode source tree should uhhh, still look like the source tree, yo
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/Source PREFIX "" FILES ${SourceFiles})
 
-# Setup our binary data as a target
-juce_add_binary_data(Assets SOURCES pamplejuce.png)
-
 # Required for Linux happiness:
 # See https://forum.juce.com/t/loading-pytorch-model-using-binarydata/39997/2
 set_target_properties(Assets PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
