@@ -77,10 +77,6 @@ jobs:
       shell: bash
       run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
 
-    - name: Test
-      working-directory: ${{ env.BUILD_DIR }}
-      run: ctest --output-on-failure -j4
-
     - name: Add Custom Icons (macOS)
       if: ${{ matrix.name == 'macOS' }}
       working-directory: ${{ env.BUILD_DIR }}
