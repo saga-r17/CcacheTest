@@ -38,7 +38,15 @@ option(JUCE_ENABLE_MODULE_SOURCE_GROUPS "Show all module sources in IDE projects
 # Locally, you'll need to run `git submodule update --init --recursive` once
 # and `git submodule update --remote --merge` to keep it up to date
 # On Github Actions, it's managed by actions/checkout
-add_subdirectory(JUCE)
+#add_subdirectory(JUCE)
+
+include(FetchContent)
+FetchContent_Declare(
+        JUCE
+        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
+        GIT_TAG 7.0.2
+)
+FetchContent_MakeAvailable(JUCE)
 
 # Check the readme at `docs/CMake API.md` in the JUCE repo for full config
 juce_add_plugin("${PROJECT_NAME}"
