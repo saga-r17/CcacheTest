@@ -129,14 +129,10 @@ target_link_libraries("${PROJECT_NAME}"
 # Required for ctest (which is just easier for cross-platform CI)
 # include(CTest) does this too, but adds tons of targets we don't want
 # See: https://github.com/catchorg/Catch2/issues/2026
-# You could forgo ctest and call ./Tests directly from the build dir
-enable_testing()
+
 
 # "GLOBS ARE BAD" is brittle and silly UX, sorry CMake!
 # CONFIGURE_DEPENDS / Clion's CMake integration makes globbing absolutely fine
-file(GLOB_RECURSE TestFiles CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/Tests/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/Tests/*.h")
-source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}/Tests PREFIX "" FILES ${TestFiles})
-
 # Use Catch2 v3 on the devel branch
 Include(FetchContent)
 FetchContent_Declare(
