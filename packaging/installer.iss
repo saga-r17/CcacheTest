@@ -4,8 +4,8 @@
 [Setup]
 AppName=masc
 OutputBaseFilename=masc-{#Version}-Windows
-AppCopyright=Copyright (C) {#Year} Melatonin
-AppPublisher=Melatonin
+AppCopyright=Copyright (C) {#Year} Neux Ltd
+AppPublisher=Neux Ltd
 AppVersion={#Version}
 DefaultDirName="{commoncf64}\VST3"
 DisableStartupPrompt=yes
