@@ -110,7 +110,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{ env.PRODUCT_NAME }}.exe
-        path: '${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe'
+        path: ./ #'${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe'
 
     - name: Upload Zip (Linux)
       if: ${{ matrix.name == 'Linux' }}
