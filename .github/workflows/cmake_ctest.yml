@@ -112,7 +112,7 @@ jobs:
       with:
         name: ${{ env.PRODUCT_NAME }}.exe
       #  path: '${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe'
-        path: '${{ env.ARTIFACTS_PATH }}/masc.vst3'
+        path: '${{ env.ARTIFACTS_PATH }}'
 
     - name: Upload Zip (Linux)
       if: ${{ matrix.name == 'Linux' }}
