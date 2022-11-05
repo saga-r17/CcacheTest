@@ -11,4 +11,4 @@ DefaultDirName="{commoncf64}\VST3"
 DisableStartupPrompt=yes
 
 [Files]
-Source: "{src}"; DestDir: "{commoncf64}\VST3\masc.vst3\"; Check: Is64BitInstallMode; Flags: external overwritereadonly ignoreversion; Attribs: hidden system;
+Source: "{src}"; DestDir: "{commoncf64}\VST3\masc.vst3\"; Check: Is64BitInstallMode; Flags: external overwritereadonly ignoreversion;
