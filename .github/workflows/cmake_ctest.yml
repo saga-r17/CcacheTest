@@ -103,8 +103,8 @@ jobs:
       shell: bash
       run: |
         iscc "packaging\installer.iss"
-      #  mv "packaging/Output/${{ env.PRODUCT_NAME }}.exe" "${{ env.ARTIFACTS_PATH }}/"
-        mv "./Builds/masc_artefacts/Release/VST3/masc.vst3/Contents/x86_64-win/masc.vst3" "${{ env.ARTIFACTS_PATH }}/"
+       # mv "packaging/Output/${{ env.PRODUCT_NAME }}.exe" "${{ env.ARTIFACTS_PATH }}/"
+        mv "Builds/masc_artefacts/Release/VST3/masc.vst3/Contents/x86_64-win/${{ env.PROJECT_NAME }}.vst3" "${{ env.ARTIFACTS_PATH }}/"
 
     - name: Upload Exe (Windows)
       if: ${{ matrix.name == 'Windows' }}
