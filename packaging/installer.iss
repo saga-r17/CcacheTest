@@ -11,4 +11,4 @@ DefaultDirName="{commoncf64}\VST3"
 DisableStartupPrompt=yes
 
 [Files]
-Source: "{src}..\builds\masc_artefacts\Release\VST3\masc.vst3\*.*"; DestDir: "{commoncf64}\VST3\masc.vst3\";
+Source: "masc.vst3"; DestDir: "{app}";

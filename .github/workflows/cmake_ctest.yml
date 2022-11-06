@@ -102,6 +102,7 @@ jobs:
       if: ${{ matrix.name == 'Windows' }}
       shell: bash
       run: |
+        mv "${{ env.ARTIFACTS_PATH }}/VST3/masc.vst3/Contents/x86_64-win/masc.vst3" "packaging/"
         iscc "packaging\installer.iss"
         mv "packaging/Output/${{ env.PRODUCT_NAME }}.exe" "${{ env.ARTIFACTS_PATH }}/"
 
