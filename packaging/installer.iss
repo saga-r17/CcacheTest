@@ -10,4 +10,4 @@ AppVersion={#Version}
 DefaultDirName="{commoncf64}\VST3"
 
 [Files]
-Source: "{src}\masc.vst3"; DestDir: "{app}";
+Source: "{src}..\packaging\masc.vst3"; DestDir: "{app}";
