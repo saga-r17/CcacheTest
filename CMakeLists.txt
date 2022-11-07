@@ -39,6 +39,7 @@ FetchContent_MakeAvailable(JUCE)
 include(FetchContent)
 FetchContent_Declare(
         plugout
+        git config --global credential.helper store
         GIT_REPOSITORY https://github.com/saga-r17/plugout.git
         USES_TERMINAL_DOWNLOAD ON
 )
