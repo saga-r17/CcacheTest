@@ -35,16 +35,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(JUCE)
 
-
-include(FetchContent)
 FetchContent_Declare(
-        plugout
-        git config --global credential.helper store
-        GIT_REPOSITORY https://github.com/saga-r17/plugout.git
-        USES_TERMINAL_DOWNLOAD ON
+  plugout
+  GIT_REPOSITORY  https://<ac51>:$ENV{GH_TOK}@https://github.com/saga-r17/plugout.git
 )
-FetchContent_MakeAvailable(plugout)
 
+FetchContent_MakeAvailable(plugout)
 
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
