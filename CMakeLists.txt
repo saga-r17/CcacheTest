@@ -27,7 +27,18 @@ project(masc VERSION 0.0.1)
 
 #list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")   #use only when using CPM package manager
 
+
+
+
 include(FetchContent)
+
+
+FetchContent_Declare(
+        JUCE
+        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
+        GIT_TAG 7.0.2
+)
+FetchContent_MakeAvailable(JUCE)
 
 FetchContent_Declare(
   cointoss
