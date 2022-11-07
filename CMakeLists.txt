@@ -31,7 +31,7 @@ include(FetchContent)
 
 FetchContent_Declare(
   cointoss
-  GIT_REPOSITORY  https://<gitlab_saggie>:$ENV{GH_PAT}@gitlab.com/sagar_17/cointoss.git
+  GIT_REPOSITORY  https://<gitlab_saggie>:$ENV{GH_PAT}@gitlab.com/073bex435.sagar/bexproj.git
   GIT_TAG c6b7df0f
 )
 
