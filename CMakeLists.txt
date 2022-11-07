@@ -31,10 +31,9 @@ include(FetchContent)
 FetchContent_Declare(
         JUCE
         GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-        GIT_TAG 7.0.2
+        
 )
 FetchContent_MakeAvailable(JUCE)
-
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
 #find_package(juce REQUIRED)
