@@ -83,9 +83,9 @@ juce_generate_juce_header(masc)
 # although it doesn't really affect executable targets). Finally, we supply a list of source files
 # that will be built into the target. This is a standard CMake command.
 
-target_sources(masc PRIVATE
-    plugout/Source/PluginEditor.cpp
-    plugout/Source/PluginProcessor.cpp)
+target_sources(masc PUBLIC
+    Source/PluginEditor.cpp
+    Source/PluginProcessor.cpp)
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
 # project, these might be passed in the 'Preprocessor Definitions' field. JUCE modules also make use
