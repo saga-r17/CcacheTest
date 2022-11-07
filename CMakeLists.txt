@@ -32,12 +32,12 @@ include(FetchContent)
 FetchContent_Declare(
   plugout
   GIT_REPOSITORY  https://<j51>:$ENV{GH_PAT}@github.com/saga-r17/plugout.git
+  GIT_TAG 6b64c3b67e28e63fb0738ccb5a2892a8b9168027
 )
 
 FetchContent_MakeAvailable(plugout)
 
 add_executable(cpp_test main.cpp)
-
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
 #find_package(juce REQUIRED)
