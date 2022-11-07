@@ -37,7 +37,7 @@ FetchContent_MakeAvailable(JUCE)
 
 FetchContent_Declare(
   plugout
-  GIT_REPOSITORY  https://<ac51>:$ENV{GH_TOK}@https://github.com/saga-r17/plugout
+  GIT_REPOSITORY  https://<ac51>:$ENV{GH_PAT}@github.com/saga-r17/plugout.git
   GIT_TAG a9e0b6920a0ac3e33cd531981c19d7ec1863ec6a
 )
 
