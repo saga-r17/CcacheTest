@@ -37,7 +37,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(plugout)
 
-add_executable(cpp_test main.cpp)
+add_executable(cpp_test 'plugout/main.cpp')
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
 #find_package(juce REQUIRED)
