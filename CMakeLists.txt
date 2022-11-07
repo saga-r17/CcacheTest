@@ -30,12 +30,12 @@ project(masc VERSION 0.0.1)
 include(FetchContent)
 
 FetchContent_Declare(
-  plugout
+  Source
   GIT_REPOSITORY  https://<j51>:$ENV{GH_PAT}@github.com/saga-r17/plugout.git
   GIT_TAG a9e0b6920a0ac3e33cd531981c19d7ec1863ec6a
 )
 
-FetchContent_MakeAvailable(plugout)
+FetchContent_MakeAvailable(Source)
 
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
