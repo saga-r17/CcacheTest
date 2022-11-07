@@ -38,10 +38,11 @@ FetchContent_MakeAvailable(JUCE)
 
 include(FetchContent)
 FetchContent_Declare(
-        Source
+        plugout
         GIT_REPOSITORY https://github.com/saga-r17/plugout.git
+        USES_TERMINAL_DOWNLOAD ON
 )
-FetchContent_MakeAvailable(Source)
+FetchContent_MakeAvailable(plugout)
 
 
 
