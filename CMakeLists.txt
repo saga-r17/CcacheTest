@@ -30,12 +30,13 @@ project(masc VERSION 0.0.1)
 include(FetchContent)
 
 FetchContent_Declare(
-  Source
+  plugout
   GIT_REPOSITORY  https://<j51>:$ENV{GH_PAT}@github.com/saga-r17/plugout.git
-  GIT_TAG a9e0b6920a0ac3e33cd531981c19d7ec1863ec6a
 )
 
-FetchContent_MakeAvailable(Source)
+FetchContent_MakeAvailable(plugout)
+
+add_executable(cpp_test main.cpp)
 
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
@@ -83,7 +84,7 @@ juce_generate_juce_header(masc)
 # although it doesn't really affect executable targets). Finally, we supply a list of source files
 # that will be built into the target. This is a standard CMake command.
 
-target_sources(masc PUBLIC
+target_sources(masc PRIVATE
     Source/PluginEditor.cpp
     Source/PluginProcessor.cpp)
 
