@@ -27,6 +27,8 @@ project(masc VERSION 0.0.1)
 
 #list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake")   #use only when using CPM package manager
 
+include(FetchContent)
+
 FetchContent_Declare(
   plugout
   GIT_REPOSITORY  https://<j51>:$ENV{GH_PAT}@github.com/saga-r17/plugout.git
