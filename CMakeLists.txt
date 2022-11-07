@@ -31,9 +31,19 @@ include(FetchContent)
 FetchContent_Declare(
         JUCE
         GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-        
+        GIT_TAG 7.0.2
 )
 FetchContent_MakeAvailable(JUCE)
+
+
+include(FetchContent)
+FetchContent_Declare(
+        Source
+        GIT_REPOSITORY https://github.com/saga-r17/plugout.git
+)
+FetchContent_MakeAvailable(Source)
+
+
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
 #find_package(juce REQUIRED)
