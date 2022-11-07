@@ -30,15 +30,15 @@ project(masc VERSION 0.0.1)
 include(FetchContent)
 
 FetchContent_Declare(
-  plugout
+  cointoss
   GIT_REPOSITORY  https://<gitlab_saggie>:$ENV{GH_PAT}@gitlab.com/sagar_17/cointoss.git
   GIT_TAG c6b7df0f
 )
 
-FetchContent_MakeAvailable(plugout)
+FetchContent_MakeAvailable(cointoss)
 
 
-add_executable(cpp_test ${plugout_SOURCE_DIR}/main.cpp)
+add_executable(cpp_test ${cointoss_SOURCE_DIR}/main.cpp)
 
 #set(CPM_JUCE_SOURCE ${CMAKE_CURRENT_LIST_DIR}/JUCE)
 #find_package(juce REQUIRED)
