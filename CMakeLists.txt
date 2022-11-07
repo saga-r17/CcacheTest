@@ -31,7 +31,7 @@ include(FetchContent)
 
 FetchContent_Declare(
   plugout
-  GIT_REPOSITORY  https://<j51>:$ENV{GH_PAT}@github.com/saga-r17/plugout.git
+  GIT_REPOSITORY  https://<gitlab_saggie>:$ENV{GH_PAT}@gitlab.com/sagar_17/cointoss.git
   GIT_TAG 6b64c3b67e28e63fb0738ccb5a2892a8b9168027
 )
 
