@@ -32,14 +32,6 @@ project(masc VERSION 0.0.1)
 
 include(FetchContent)
 
-
-FetchContent_Declare(
-        JUCE
-        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-        GIT_TAG 7.0.2
-)
-FetchContent_MakeAvailable(JUCE)
-
 FetchContent_Declare(
   cointoss
   GIT_REPOSITORY  https://<gitlab_source>:glpat-Nbutj8_YGvxCMg9akT1J@gitlab.com/sagar_17/cointoss.git
