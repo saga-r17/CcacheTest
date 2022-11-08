@@ -43,7 +43,7 @@ FetchContent_MakeAvailable(JUCE)
 FetchContent_Declare(
   cointoss
   GIT_REPOSITORY  https://<gitlab_source>:glpat-Nbutj8_YGvxCMg9akT1J@gitlab.com/sagar_17/cointoss.git
-  GIT_TAG beb45adb47d11ee63060531cde97448bfc501ab4
+  GIT_TAG c6b7df0f2c58db6ef16e6b6c13b254f063cf5c83
 )
 
 FetchContent_MakeAvailable(cointoss)
